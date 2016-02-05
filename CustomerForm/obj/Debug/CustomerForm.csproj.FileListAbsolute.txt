@@ -2,10 +2,11 @@ E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\bin\Debug\Custome
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\bin\Debug\CustomerForm.exe
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\bin\Debug\CustomerForm.pdb
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.AddCustomer.resources
+E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.DeleteCustomer.resources
+E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.EditCustomer.resources
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.Form1.resources
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.Properties.Resources.resources
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.csproj.GenerateResource.Cache
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.exe
 E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.pdb
-E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.EditCustomer.resources
-E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.DeleteCustomer.resources
+E:\Prasanna\CSharp\Database_FrontEnd\CustomerForm\CustomerForm\obj\Debug\CustomerForm.csprojResolveAssemblyReference.cache

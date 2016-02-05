@@ -16,7 +16,7 @@ namespace CustomerForm
     public partial class DeleteCustomer : Form
     {
         private string _holder;
-        private string _fn, _ln, _em, _ph, _ad;
+        private string _fn, _ln, _em, _ph, _ad , _colname;
         public string holder
         {
             get
@@ -83,6 +83,11 @@ namespace CustomerForm
                 _ph = value;
             }
         }
+        public string colname
+        {
+            get { return _colname;}
+            set { _colname =value;}
+        }
 
 
         public DeleteCustomer(string st)
@@ -91,8 +96,18 @@ namespace CustomerForm
             InitializeComponent();
             this.MaximizeBox = false;
             label6.Visible = false;
+            DataTable dtedt = new DataTable();
             Form1 fm1 = new Form1();
-            DataTable dtedt = fm1.getSelecteddatafromDB("email", this.holder);
+            if ( st.Contains("@"))
+            {
+             dtedt = fm1.getSelecteddatafromDB("email", this.holder);
+                colname = "email";
+            }
+            else
+            {
+                dtedt = fm1.getSelecteddatafromDB("phone", this.holder);
+                colname = "phone";
+            }
             this.fn = dtedt.Rows[0]["firstname"].ToString();
             this.ln = dtedt.Rows[0]["lastname"].ToString();
             this.em = dtedt.Rows[0]["email"].ToString();
@@ -127,6 +142,7 @@ namespace CustomerForm
                textBox4.Text = string.Empty;
                richTextBox1.Text = string.Empty;
                button1.Enabled = false;
+   
                
            }
            else
@@ -135,21 +151,21 @@ namespace CustomerForm
            }
         }
 
-        private void deletedata()
+        private void  deletedata()
         {
             try
             {
                 
 
-                if ((textBox1.Text.Length > 0) && (textBox2.Text.Length > 0)
-                    && (textBox3.Text.Length > 0) && (textBox4.Text.Length > 0)
-                    && (richTextBox1.Text.Length > 0))
-                {
+                //if ((textBox1.Text.Length > 0) && (textBox2.Text.Length > 0)
+                //    &&  (textBox4.Text.Length > 0)
+                //    && (richTextBox1.Text.Length > 0))
+                //{
                     //  string DQ = "\"";
                     MySqlConnection conn = new MySqlConnection();
                     conn.ConnectionString = ConfigurationManager.ConnectionStrings["mysqlconn"].ToString();
                     string strmycomd = "delete from   customer " +
-                                      " where email='" + this.holder + "';";
+                                      " where "+this.colname+"='" + this.holder + "';";
                     MySqlCommand mycmd = new MySqlCommand(strmycomd, conn);
                     try
                     {
@@ -161,7 +177,7 @@ namespace CustomerForm
                     {
                         throw;
                     }
-                }
+               // }
             }
 
             catch (Exception e2)
